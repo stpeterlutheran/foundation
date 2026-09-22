@@ -24,7 +24,8 @@ non-technical, many on phones.
 - **Stack:** hand-authored HTML with inline CSS. No framework, no build step, no
   backend, no dependencies.
 - **Entry point:** `index.html` is the whole site.
-- **Also published:** `Gift Acceptance Policy.dc.html` (rendered by the generated
+- **Also published:** `privacy.html` (standalone, self-styled like `404.html`),
+  `Gift Acceptance Policy.dc.html` (rendered by the generated
   `support.js` runtime — **never hand-edit `support.js`**), the church logo, and
   the `favicon.ico` / `apple-touch-icon.png` pair.
 - **Public address:** `stpeterlutheranfoundation.org`, set by the `CNAME` file;
@@ -37,7 +38,11 @@ non-technical, many on phones.
 
 ### Non-negotiables
 
-- Keep it static. No bundler, no npm, no tracking scripts.
+- Keep it static. No bundler, no npm, no advertising or behavioural tracking
+  scripts. The one measurement script allowed is Cloudflare Web Analytics,
+  which is cookieless and does not fingerprint or profile visitors; it is
+  described on `privacy.html`. Adding any other third-party script is a
+  change to ask about first.
 - Do not restyle the site on your own initiative — a prior colour-scheme change
   was reverted. Preserve the Cormorant Garamond typography and existing palette
   unless a restyle is the explicit request.

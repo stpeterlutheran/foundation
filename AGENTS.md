@@ -20,7 +20,8 @@ planned gifts), and publish the Foundation's governing documents.
 - **Audience:** congregation members and prospective donors — largely non-technical,
   many on phones or older desktop browsers.
 - **Product shape:** a static site. No build step, no framework, no backend, no
-  database, no analytics pipeline.
+  database. Measurement is one cookieless Cloudflare Web Analytics beacon in the
+  `<head>` of each published page — there is no analytics pipeline beyond it.
 - **Hosting:** GitHub Pages, deployed by `.github/workflows/static.yml` on every
   push to `main`. The workflow stages the public site into `_site`, verifies its
   local HTML links/assets, uploads that directory as the Pages artifact, and
@@ -126,6 +127,29 @@ Optionally, an organization-level verification `TXT` record
 (`_github-pages-challenge-Gogorichielab`) prevents anyone else claiming this
 domain on GitHub. It is not required for the site to work.
 
+### Analytics and the privacy policy
+
+Visitor measurement is **Cloudflare Web Analytics**, added as a single deferred
+`<script>` in the `<head>` of `index.html`, `404.html`, `privacy.html`, and
+`Gift Acceptance Policy.dc.html`. Three things to know before touching it:
+
+- The `data-cf-beacon` token is a **public** beacon identifier, not a secret. It
+  is meant to be readable in page source, so committing it is correct and it does
+  not belong in a secret store.
+- The beacon is used rather than Cloudflare's automatic injection because the DNS
+  records for this domain are **DNS only** (see **Custom domain** above).
+  Automatic injection only works for proxied records, which this site cannot use.
+- Reports live in the Cloudflare dashboard under **Web Analytics**, on the site
+  registered for `stpeterlutheranfoundation.org`.
+
+`privacy.html` is the public description of all of this. It is a standalone page
+that carries its own styles and root-relative links, the same pattern as
+`404.html`, and it is linked from the footer of every published page. **If the
+site's data handling changes — a new third-party script, an embedded form, a
+different host — `privacy.html` and its effective date must change in the same
+commit.** The page is deliberately plain-spoken; it is read by congregation
+members, not lawyers.
+
 ### Conventions that matter
 
 - `index.html` carries its styling inline. That is intentional for a
@@ -152,7 +176,9 @@ domain on GitHub. It is not required for the site to work.
 1. Read the surrounding markup before changing it.
 2. Make the smallest change that satisfies the request.
 3. Verify by opening `index.html` in a browser at both phone and laptop widths.
-4. Keep the site static — no dependencies, no bundler, no tracking scripts.
+4. Keep the site static — no dependencies, no bundler, no advertising or
+   behavioural tracking scripts. Cloudflare Web Analytics is the single
+   permitted measurement script; anything else needs a decision first.
 
 ---
 

@@ -8,6 +8,10 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <script src="./support.js"></script>
+<!-- Cloudflare Web Analytics: cookieless, no fingerprinting, no cross-site
+     tracking. The token is a public beacon identifier, not a secret. Any change
+     here must stay consistent with privacy.html. -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "8da80857678c40b08e02196f1bc1ce89"}'></script>
 </head>
 <body>
 <x-dc>
@@ -237,7 +241,7 @@
   <!-- FOOTER -->
   <footer style="background: #20302f; color: #b0a99b;">
     <div style="max-width: 1080px; margin: 0 auto; padding: 40px 26px; display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; font-size: 13.5px;">
-      <div>&copy; {{ year }} St.&nbsp;Peter Evangelical Lutheran Church Foundation, NFP</div>
+      <div>&copy; {{ year }} St.&nbsp;Peter Evangelical Lutheran Church Foundation, NFP &middot; <a href="privacy.html" style="color: #c6bfb1; text-decoration: underline; text-underline-offset: 3px;" style-hover="color:#fff;">Privacy Policy</a></div>
       <a href="index.html" style="text-decoration: none; color: #d9b877; font-weight: 600;">Return to Foundation home <span aria-hidden="true">&rarr;</span></a>
     </div>
   </footer>
