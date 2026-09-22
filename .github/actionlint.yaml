@@ -1,0 +1,16 @@
+# actionlint configuration.
+#
+# actionlint validates `runs-on:` against a table of runner labels baked into
+# the release. v1.7.12 — the version pinned in static.yml, and the newest
+# released as of this change — predates the Ubuntu 26.04 image, so it rejects
+# `ubuntu-26.04` as an unknown label and fails the Spellcheck job.
+#
+# The label is real and GitHub-hosted, not self-hosted; this block only tells
+# actionlint the label exists. See actions/runner-images#14748, which announces
+# that `ubuntu-latest` becomes 26.04 between 2026-10-19 and 2026-11-19.
+#
+# Remove this file once the pinned actionlint knows `ubuntu-26.04` on its own,
+# so runner labels are fully validated again.
+self-hosted-runner:
+  labels:
+    - ubuntu-26.04
