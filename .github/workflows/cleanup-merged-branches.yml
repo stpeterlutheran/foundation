@@ -46,7 +46,7 @@ concurrency:
 jobs:
   cleanup:
     name: Delete merged branches
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     timeout-minutes: 15
     steps:
       - name: Delete branches whose pull request has merged

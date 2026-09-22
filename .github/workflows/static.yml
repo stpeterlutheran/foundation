@@ -3,6 +3,13 @@
 # Repository adaptations: preserve the Spellcheck required check and config,
 # stage only the public static-site surface, validate local links, and keep
 # deployment gated behind successful checks and restricted to main.
+#
+# Runner labels are pinned to an explicit Ubuntu version rather than
+# `ubuntu-latest`. This pipeline deploys the live site, so the image it runs on
+# should change when someone decides to change it, not on the vendor's rollout
+# schedule. See actions/runner-images#14748: `ubuntu-latest` becomes 26.04
+# between 2026-10-19 and 2026-11-19. Bumping the pin needs one green run here
+# and nothing else.
 name: Validate and deploy static site
 
 on:
@@ -25,7 +32,7 @@ env:
 jobs:
   spellcheck:
     name: Spellcheck
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     timeout-minutes: 15
     steps:
       - name: Checkout repository
@@ -54,7 +61,7 @@ jobs:
   build:
     name: Build Pages artifact
     needs: spellcheck
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     timeout-minutes: 15
     steps:
       - name: Checkout repository
@@ -93,7 +100,7 @@ jobs:
           test -f "$SITE_DIRECTORY/sitemap.xml"
           test -f "$SITE_DIRECTORY/assets/church-logo.png"
           test -f "$SITE_DIRECTORY/uploads/Church Logo.png"
-          python - <<'PY'
+          python3 - <<'PY'
           from html.parser import HTMLParser
           from pathlib import Path
           from urllib.parse import unquote, urlsplit
@@ -173,7 +180,7 @@ jobs:
     name: Deploy to GitHub Pages
     if: github.event_name != 'pull_request' && github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-26.04
     timeout-minutes: 10
     permissions:
       contents: read
