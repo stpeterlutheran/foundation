@@ -2,6 +2,8 @@ backend
 biblically
 bundler
 Cloudflare
+Cloudflare's
+cookieless
 copywriting
 coreyhaines
 CRATs
@@ -51,6 +53,7 @@ Sporleder
 Sonja
 St
 stpeterlutheran
+stpeterlutheranfoundation
 Undesignated
 undesignated
 unitrust

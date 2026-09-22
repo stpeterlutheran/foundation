@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy &mdash; St. Peter Lutheran Church Foundation</title>
+<meta name="description" content="How the St. Peter Lutheran Church Foundation website handles visitor information: no cookies, no advertising trackers, and cookieless Cloudflare Web Analytics.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Cloudflare Web Analytics: cookieless, no fingerprinting, no cross-site
+     tracking. The token is a public beacon identifier, not a secret. Any change
+     here must stay consistent with privacy.html. -->
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "8da80857678c40b08e02196f1bc1ce89"}'></script>
+<style>
+  /* Standalone page, like 404.html: it carries its own styles and links to the
+     site by root-relative paths so it renders correctly on its own. Palette and
+     typography match index.html deliberately. */
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Source Sans 3', -apple-system, sans-serif;
+    color: #2c2823;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+    background: #faf6ee;
+  }
+  ::selection { background: #0a6f97; color: #fff; }
+
+  :focus-visible { outline: 3px solid #0a4f6d; outline-offset: 2px; box-shadow: 0 0 0 2px #fdfaf3; }
+  @media (forced-colors: active) { :focus-visible { outline-color: Highlight; } }
+
+  .spf-top {
+    background: #fdfaf3;
+    border-bottom: 1px solid #e7ded0;
+  }
+  .spf-topinner {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 20px 26px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+  }
+  .spf-mark img { height: 46px; width: auto; display: block; }
+  .spf-back {
+    text-decoration: none;
+    color: #0a5a7d;
+    font-size: 14.5px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .spf-back:hover { color: #084f6d; }
+
+  .spf-hero {
+    background: radial-gradient(120% 95% at 50% 0%, #fdfaf3 0%, #faf6ee 42%, #f3ebdb 100%);
+    border-bottom: 1px solid #e7ded0;
+  }
+  .spf-heroinner { max-width: 760px; margin: 0 auto; padding: 60px 26px 48px; }
+
+  .spf-eyebrow { display: flex; align-items: center; gap: 13px; margin-bottom: 20px; }
+  .spf-eyebrow span.rule { height: 1px; width: 34px; background: #c9a35e; }
+  .spf-eyebrow span.label { font-size: 12.5px; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; color: #8a5a2b; }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: clamp(38px, 6.4vw, 60px);
+    line-height: 1.06;
+    letter-spacing: -0.01em;
+    margin: 0 0 20px;
+    max-width: 18ch;
+    color: #221f1a;
+    text-wrap: balance;
+  }
+  .spf-lede { font-size: clamp(16.5px, 2vw, 19px); line-height: 1.68; color: #574e43; margin: 0 0 26px; max-width: 58ch; }
+  .spf-dates { font-size: 14px; color: #6b6153; margin: 0; }
+
+  main { flex: 1 0 auto; }
+  .spf-wrap { max-width: 760px; margin: 0 auto; padding: 52px 26px 76px; }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: clamp(27px, 3.4vw, 34px);
+    line-height: 1.14;
+    color: #0a5a7d;
+    margin: 46px 0 14px;
+  }
+  h2:first-of-type { margin-top: 0; }
+  p { font-size: 16.5px; line-height: 1.7; color: #3f3a32; margin: 0 0 16px; max-width: 66ch; }
+  ul { margin: 0 0 16px; padding-left: 22px; max-width: 66ch; }
+  li { font-size: 16.5px; line-height: 1.7; color: #3f3a32; margin-bottom: 9px; }
+  a { color: #0a5a7d; }
+  a:hover { color: #084f6d; }
+
+  .spf-callout {
+    background: #f3ebdb;
+    border-left: 3px solid #c9a35e;
+    border-radius: 0 8px 8px 0;
+    padding: 22px 26px;
+    margin: 0 0 8px;
+  }
+  .spf-callout p:last-child { margin-bottom: 0; }
+
+  footer { flex-shrink: 0; background: #20302f; color: #a49a8b; font-size: 13.5px; text-align: center; padding: 30px 26px 34px; }
+  footer a { color: #c6bfb1; text-decoration: underline; text-underline-offset: 3px; }
+  footer a:hover { color: #fff; }
+
+  @media (max-width: 420px) {
+    .spf-topinner, .spf-heroinner, .spf-wrap { padding-left: 16px; padding-right: 16px; }
+    .spf-heroinner { padding-top: 44px; padding-bottom: 36px; }
+    .spf-mark img { height: 40px; }
+    .spf-eyebrow span.rule { width: 20px; }
+    footer { padding-left: 16px; padding-right: 16px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="spf-top">
+    <div class="spf-topinner">
+      <a class="spf-mark" href="/">
+        <img src="/assets/church-logo.png" alt="St. Peter Evangelical Lutheran Church of Gilberts">
+      </a>
+      <a class="spf-back" href="/"><span aria-hidden="true" style="font-size: 17px;">&larr;</span> Back to Foundation</a>
+    </div>
+  </div>
+
+  <div class="spf-hero">
+    <div class="spf-heroinner">
+      <div class="spf-eyebrow">
+        <span class="rule"></span>
+        <span class="label">Privacy Policy</span>
+        <span class="rule"></span>
+      </div>
+
+      <h1>How this website treats your information</h1>
+
+      <p class="spf-lede">This site exists to explain the Foundation and the ways a person can give. It does not ask you to sign in, fill in a form, or hand over anything about yourself &mdash; and it does not set cookies or carry advertising trackers.</p>
+
+      <p class="spf-dates">Effective September&nbsp;22, 2026 &middot; Applies to stpeterlutheranfoundation.org</p>
+    </div>
+  </div>
+
+  <main class="spf-wrap">
+
+    <div class="spf-callout">
+      <p><strong>The short version.</strong> No cookies. No advertising or social-media trackers. No accounts and no forms. We use one privacy-first measurement tool that counts page views without identifying anyone, and we never sell, rent, or share what little it records.</p>
+    </div>
+
+    <h2>Information we do not collect</h2>
+
+    <p>There is no sign-in, no newsletter box, no comment thread, and no payment page anywhere on this site. Because of that, the Foundation does not collect your name, address, telephone number, email address, or payment details through this website.</p>
+
+    <p>Gifts to the Foundation are arranged directly with the Foundation, the church office, or your own advisors &mdash; never through this site. Records of gifts and of the people who make them are kept by the Foundation outside this website and are not published here.</p>
+
+    <h2>Measurement: Cloudflare Web Analytics</h2>
+
+    <p>So that we know which pages are actually useful to people, this site includes Cloudflare Web Analytics. It is a privacy-first alternative to the usual advertising-funded analytics products, and it is the only measurement tool on the site.</p>
+
+    <ul>
+      <li>It does not use cookies or any other storage on your device.</li>
+      <li>It does not build a fingerprint of your browser or device.</li>
+      <li>It does not follow you to other websites, and it does not create a profile of you.</li>
+      <li>It reports only in aggregate &mdash; how many visits a page received, roughly where in the world visitors came from, which site referred them, and what kind of browser and device they used.</li>
+    </ul>
+
+    <p>Only members of the Foundation who maintain this site can see these reports. Cloudflare's own description of the service is published in the <a href="https://developers.cloudflare.com/web-analytics/" rel="noopener">Cloudflare Web Analytics documentation</a>, and its handling of data is covered by the <a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare Privacy Policy</a>.</p>
+
+    <h2>Hosting and server logs</h2>
+
+    <p>The site is published through GitHub Pages. Like any web server, GitHub's servers record ordinary technical details of each request &mdash; including the visiting address, the page requested, and the time &mdash; to deliver pages and to protect the service from abuse. Those logs belong to GitHub, not to the Foundation, and we do not receive them. GitHub explains its practices in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub General Privacy Statement</a>.</p>
+
+    <p>The domain name is served through Cloudflare, which is also covered by the Cloudflare privacy policy linked above.</p>
+
+    <h2>Fonts</h2>
+
+    <p>The typefaces used here are loaded from Google Fonts. Requesting a font tells Google's servers the visiting address and which font was asked for. Google states that it does not use these requests to build advertising profiles; see the <a href="https://developers.google.com/fonts/faq/privacy" rel="noopener">Google Fonts privacy information</a>.</p>
+
+    <h2>If you write to us</h2>
+
+    <p>The site lists an email address and a mailing address so you can reach the Foundation. If you choose to write, we keep your message and our reply for as long as we need them to answer you well and to keep an orderly record of Foundation business. We do not add you to any mailing list because you wrote to us, and we do not share your message outside the Foundation except where the law requires it.</p>
+
+    <h2>Links to other sites</h2>
+
+    <p>Where this site links to the church, to Cloudflare, to GitHub, or to any other organization, that organization's own privacy practices apply once you follow the link. We are not responsible for them, and we encourage you to read them.</p>
+
+    <h2>Children</h2>
+
+    <p>This site is written for adults considering a gift. It is not directed at children, and the Foundation does not knowingly collect information from them.</p>
+
+    <h2>Your choices</h2>
+
+    <p>Because nothing here is stored on your device and nothing identifies you, there is no cookie banner to dismiss and no preference to save. If you would rather not be counted at all, a browser that blocks scripts or a content blocker will stop the measurement script from loading, and the site will work exactly as before.</p>
+
+    <h2>Changes to this policy</h2>
+
+    <p>If the Foundation changes how this site handles visitor information, this page changes with it and the effective date above is updated. The history of every change is public in the repository that publishes the site.</p>
+
+    <h2>Questions</h2>
+
+    <p>Write to <a href="mailto:tech@stpeterlutheran.org">tech@stpeterlutheran.org</a>, or to the St.&nbsp;Peter Evangelical Lutheran Church Foundation, NFP, 985&nbsp;Galligan Road, Gilberts, IL&nbsp;60136. We are glad to answer.</p>
+
+  </main>
+
+  <footer>
+    St.&nbsp;Peter Evangelical Lutheran Church Foundation, NFP &middot; An Illinois Not-For-Profit Corporation<br>
+    <a href="/">Foundation home</a> &middot; <a href="/Gift%20Acceptance%20Policy.dc.html">Gift Acceptance Policy</a>
+  </footer>
+
+</body>
+</html>

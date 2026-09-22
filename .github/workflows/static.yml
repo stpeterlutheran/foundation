@@ -67,7 +67,7 @@ jobs:
           set -euo pipefail
           rm -rf "$SITE_DIRECTORY"
           mkdir -p "$SITE_DIRECTORY/assets" "$SITE_DIRECTORY/uploads"
-          cp index.html 404.html "Gift Acceptance Policy.dc.html" support.js "$SITE_DIRECTORY/"
+          cp index.html 404.html privacy.html "Gift Acceptance Policy.dc.html" support.js "$SITE_DIRECTORY/"
           cp favicon.ico apple-touch-icon.png "$SITE_DIRECTORY/"
           cp robots.txt sitemap.xml "$SITE_DIRECTORY/"
           cp assets/church-logo.png "$SITE_DIRECTORY/assets/"
@@ -84,6 +84,7 @@ jobs:
           set -euo pipefail
           test -f "$SITE_DIRECTORY/index.html"
           test -f "$SITE_DIRECTORY/404.html"
+          test -f "$SITE_DIRECTORY/privacy.html"
           test -f "$SITE_DIRECTORY/Gift Acceptance Policy.dc.html"
           test -f "$SITE_DIRECTORY/support.js"
           test -f "$SITE_DIRECTORY/favicon.ico"
